@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Game from './Game';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux"
 import {createStore} from "redux";
-import { boardReducer } from './boardReducer';
+import { gameReducer } from './gameReducer';
 
-const store = createStore(boardReducer);
+const store = createStore(gameReducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Game />
   </Provider>,
   document.getElementById('root')
 );
